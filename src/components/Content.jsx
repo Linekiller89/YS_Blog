@@ -1,5 +1,5 @@
 import React from "react";
-import "..styles/content.css";
+import "../styles/content.css";
 import Slide from "./Slider";
 
 function Content() {
