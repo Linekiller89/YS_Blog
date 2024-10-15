@@ -12,9 +12,6 @@ function Slide() {
       <SwiperSlide>
         <div className="project-card">Project 2</div>
       </SwiperSlide>
-      <SwiperSlide>
-        <div className="project-card">Project 3</div>
-      </SwiperSlide>
     </Swiper>
   );
 }
