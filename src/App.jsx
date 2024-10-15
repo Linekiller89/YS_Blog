@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Projects from "./pages/Projects";
+import { Navigate } from "react-router-dom";
 import Blog from "./pages/Blog";
 import WritePost from "./pages/WritePost";
 import BlogPost from "./pages/BlogPost";
@@ -21,6 +22,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
+        {/* 최초 YS_Blog로 진입하면 /로 리다이렉트 */}
+        <Route path="/YS_Blog" element={<Navigate to="/" />} />
         <Route
           path="/"
           element={
