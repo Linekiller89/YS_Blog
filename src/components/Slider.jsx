@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import "./Slider.css";
+import "../styles/slider.css";
 
 function Slide() {
   return (

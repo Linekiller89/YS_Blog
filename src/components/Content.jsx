@@ -1,5 +1,5 @@
 import React from "react";
-import "./Content.css";
+import "..styles/content.css";
 import Slide from "./Slider";
 
 function Content() {
@@ -11,3 +11,5 @@ function Content() {
     </div>
   );
 }
+
+export default Content;
