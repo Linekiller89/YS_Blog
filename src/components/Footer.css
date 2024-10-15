@@ -1,0 +1,27 @@
+/* Footer 스타일 */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 50px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footer ul li a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: white;
+}
