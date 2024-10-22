@@ -22,14 +22,13 @@ function App() {
   // 오프닝 페이지에서 홈으로 자동 리디렉션
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/home"); // 일정 시간 후 홈으로 이동
-    }, 3000); // 3초 후 리디렉션
-    return () => clearTimeout(timer); // 타이머 정리
+      navigate("/home");
+    }, 5000);
+    return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
     <div className="App">
-      <Header />
       <Routes>
         {/* 오프닝 페이지 */}
         <Route
@@ -44,6 +43,7 @@ function App() {
           path="/home"
           element={
             <>
+              <Header />
               <Home />
               <Footer />
             </>
@@ -53,6 +53,7 @@ function App() {
           path="/projects"
           element={
             <>
+              <Header />
               <Projects />
               <Footer />
             </>
