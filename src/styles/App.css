@@ -1,12 +1,15 @@
 /* Body 스타일 */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #222;
   color: #fff;
+  min-width: 500px;
+  overflow-x: hidden; /* 가로 스크롤을 방지 */
 }
 
 .App {
   text-align: center;
-  padding: 0 20px;
+  padding: 0 25%;
 }

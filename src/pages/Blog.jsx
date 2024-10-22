@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "../styles/Blog.css";
 
 function Blog() {
   const [posts, setPosts] = useState([]);
@@ -24,22 +25,22 @@ function Blog() {
 
   return (
     <div className="blog-container">
-      <h1>Blog</h1>
-      <button onClick={handleNewPost}>새 글 작성</button>
+      <h3>Blog</h3>
+      <button onClick={handleNewPost} className="new-post-button">
+        새 글 작성
+      </button>
       {posts.length > 0 ? (
         posts.map((post, index) => (
-          <div key={index} className="post-card">
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
-            <small>Published on {post.date}</small>
-            <Link to={`/blog/${index}`}>상세 내용</Link>{" "}
-            {/* 상세 페이지로 이동하는 링크 */}
+          <div key={index} className="blog-post">
+            <small>{post.date}</small>
+            <Link to={`/blog/${index}`} className="blog-post-link">
+              {post.title}
+            </Link>
             <button onClick={() => deletePost(index)}>Delete</button>{" "}
-            {/* 삭제 버튼 */}
           </div>
         ))
       ) : (
-        <p>No posts yet.</p>
+        <p className="no-posts-message">No posts yet.</p>
       )}
     </div>
   );

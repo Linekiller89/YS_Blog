@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
@@ -13,20 +12,12 @@ import "./styles/App.css";
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const navigate = useNavigate();
 
   const addPost = (newPost) => {
     setPosts([...posts, newPost]);
   };
 
   // 오프닝 페이지에서 홈으로 자동 리디렉션
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/home");
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [navigate]);
-
   return (
     <div className="App">
       <Routes>
@@ -45,7 +36,6 @@ function App() {
             <>
               <Header />
               <Home />
-              <Footer />
             </>
           }
         />
@@ -55,7 +45,6 @@ function App() {
             <>
               <Header />
               <Projects />
-              <Footer />
             </>
           }
         />
@@ -63,6 +52,7 @@ function App() {
           path="/blog"
           element={
             <>
+              <Header />
               <Blog posts={posts} />
             </>
           }
